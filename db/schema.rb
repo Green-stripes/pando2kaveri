@@ -10,8 +10,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 0) do
+ActiveRecord::Schema[7.0].define(version: 2023_11_22_190446) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "parameters", force: :cascade do |t|
+    t.string "type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "pollutants_levels", force: :cascade do |t|
+    t.bigint "room_id", null: false
+    t.bigint "parameter_id", null: false
+    t.datetime "time_stamp"
+    t.integer "level"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["parameter_id"], name: "index_pollutants_levels_on_parameter_id"
+    t.index ["room_id"], name: "index_pollutants_levels_on_room_id"
+  end
+
+  create_table "rooms", force: :cascade do |t|
+    t.integer "room_number"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_foreign_key "pollutants_levels", "parameters"
+  add_foreign_key "pollutants_levels", "rooms"
 end
