@@ -471,7 +471,6 @@
 2021-11-01T00:09:18Z	HUM	59	PandoSensors	B3D54FD000088F	1	Pando2	Paris	75018	48 Rue René Clair 75018 Île-de-France France	48.8939059	2.354347	4	Room 8F
 2021-11-01T00:09:18Z	TMP	17	PandoSensors	B3D54FD000088F	1	Pando2	Paris	75018	48 Rue René Clair 75018 Île-de-France France	48.8939059	2.354347	4	Room 8F
 2021-11-01T00:09:18Z	VOCT	31	PandoSensors	B3D54FD000088F	1	Pando2	Paris	75018	48 Rue René Clair 75018 Île-de-France France	48.8939059	2.354347	4	Room 8F
-@timestamp	measure_type	measure_float	brand	serial_number	establishment_id	establishment_name	establishment_city	establishment_postcode	establishment_address	establishment_latitude	establishment_longitude	room_id	room_name
 2021-11-01T23:48:13Z	CO2	333	PandoSensors	B3D54FD00007B2	1	Pando2	Paris	75018	48 Rue René Clair 75018 Île-de-France France	48.8939059	2.354347	1	Room B2
 2021-11-01T23:48:13Z	HUM	54	PandoSensors	B3D54FD00007B2	1	Pando2	Paris	75018	48 Rue René Clair 75018 Île-de-France France	48.8939059	2.354347	1	Room B2
 2021-11-01T23:48:13Z	TMP	17	PandoSensors	B3D54FD00007B2	1	Pando2	Paris	75018	48 Rue René Clair 75018 Île-de-France France	48.8939059	2.354347	1	Room B2
@@ -940,7 +939,6 @@
 2021-11-01T00:07:54Z	HUM	57	PandoSensors	B3D54FD00007B2	1	Pando2	Paris	75018	48 Rue René Clair 75018 Île-de-France France	48.8939059	2.354347	1	Room B2
 2021-11-01T00:07:54Z	TMP	18	PandoSensors	B3D54FD00007B2	1	Pando2	Paris	75018	48 Rue René Clair 75018 Île-de-France France	48.8939059	2.354347	1	Room B2
 2021-11-01T00:07:54Z	VOCT	189	PandoSensors	B3D54FD00007B2	1	Pando2	Paris	75018	48 Rue René Clair 75018 Île-de-France France	48.8939059	2.354347	1	Room B2
-@timestamp	measure_type	measure_float	brand	serial_number	establishment_id	establishment_name	establishment_city	establishment_postcode	establishment_address	establishment_latitude	establishment_longitude	room_id	room_name
 2021-11-01T23:54:23Z	CO2	384	PandoSensors	B3D54FD000088A	1	Pando2	Paris	75018	48 Rue René Clair 75018 Île-de-France France	48.8939059	2.354347	3	Room 8A
 2021-11-01T23:54:23Z	HUM	55	PandoSensors	B3D54FD000088A	1	Pando2	Paris	75018	48 Rue René Clair 75018 Île-de-France France	48.8939059	2.354347	3	Room 8A
 2021-11-01T23:54:23Z	TMP	17	PandoSensors	B3D54FD000088A	1	Pando2	Paris	75018	48 Rue René Clair 75018 Île-de-France France	48.8939059	2.354347	3	Room 8A
