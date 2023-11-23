@@ -4,4 +4,7 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+  resources :rooms, only: [:create]
+  resources :parameters, only: [:create]
+  resources :pollutants_level, only: [:create]
 end
