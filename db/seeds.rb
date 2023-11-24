@@ -4,6 +4,13 @@ filepath = "./app/assets/data"
 
 # i = 0
 
+puts "Clearing the database!"
+PollutantsLevel.destroy_all
+Room.destroy_all
+Parameter.destroy_all
+
+
+puts "Repopulating the database"
 CSV.foreach(filepath, headers: :first_row, col_sep: "\t") do |row|
   # p row[12]
   # puts "#{i} done"
