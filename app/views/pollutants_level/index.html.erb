@@ -19,7 +19,7 @@
     <%= @levels_co2 %>
 
 <div data-controller="graphics">
-   <canvas data-graphics-target="myChart" data-graphics-chart-data="<%= { labels: @times_co2, data: @levels_co2 }.to_json%>"></canvas>
+   <canvas data-graphics-target="myChart" width="400" height="400" data-graphics-chart-data="<%= { labels: @times_co2, data: @levels_co2 }.to_json%>"></canvas>
 </div>
 
 
