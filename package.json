@@ -1,0 +1,27 @@
+{
+  "name": "pando2kaveri",
+  "version": "1.0.0",
+  "description": "Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team.",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Green-stripes/pando2kaveri.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Green-stripes/pando2kaveri/issues"
+  },
+  "homepage": "https://github.com/Green-stripes/pando2kaveri#readme",
+  "dependencies": {
+    "chart.js": "^4.4.0"
+  }
+}
