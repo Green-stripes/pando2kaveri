@@ -1,36 +1,36 @@
-<h1>Your readings:</h1>
-
-<div class="cards" data-controller="graphics">
-  <div class="card-category">
-    <canvas data-graphics-target="myChart" width="400" height="400" data-graphics-chart-data="<%= {
-      labels: @data_by_room[4][:times_CO2],
-      data_CO2_1: @data_by_room[1][:levels_CO2],
-      data_CO2_3: @data_by_room[3][:levels_CO2],
-      data_CO2_4: @data_by_room[4][:levels_CO2]
-    }.to_json %>"></canvas>
-  </div>
-  <div class="card-category">
-    <canvas data-graphics-target="myChart1" width="400" height="400" data-graphics-chart1-data="<%= {
-        labels: @data_by_room[1][:times_TMP],
-        data_TMP_1: @data_by_room[1][:levels_TMP],
-        data_TMP_3: @data_by_room[3][:levels_TMP],
-        data_TMP_4: @data_by_room[4][:levels_TMP]
+<div class="container">
+  <div class="cards" data-controller="graphics">
+    <div class="card-category">
+      <canvas data-graphics-target="myChart" width="400" height="400" data-graphics-chart-data="<%= {
+        labels: @data_by_room[4][:times_CO2],
+        data_CO2_1: @data_by_room[1][:levels_CO2],
+        data_CO2_3: @data_by_room[3][:levels_CO2],
+        data_CO2_4: @data_by_room[4][:levels_CO2]
       }.to_json %>"></canvas>
-  </div>
-  <div class="card-category">
-    <canvas data-graphics-target="myChart3" width="400" height="400" data-graphics-chart3-data="<%= {
-        labels: @data_by_room[1][:times_VOCT],
-        data_VOCT_1: @data_by_room[1][:levels_VOCT],
-        data_VOCT_3: @data_by_room[3][:levels_VOCT],
-        data_VOCT_4: @data_by_room[4][:levels_VOCT]
+    </div>
+    <div class="card-category">
+      <canvas data-graphics-target="myChart1" width="400" height="400" data-graphics-chart1-data="<%= {
+          labels: @data_by_room[1][:times_TMP],
+          data_TMP_1: @data_by_room[1][:levels_TMP],
+          data_TMP_3: @data_by_room[3][:levels_TMP],
+          data_TMP_4: @data_by_room[4][:levels_TMP]
+        }.to_json %>"></canvas>
+    </div>
+    <div class="card-category">
+      <canvas data-graphics-target="myChart3" width="400" height="400" data-graphics-chart3-data="<%= {
+          labels: @data_by_room[1][:times_VOCT],
+          data_VOCT_1: @data_by_room[1][:levels_VOCT],
+          data_VOCT_3: @data_by_room[3][:levels_VOCT],
+          data_VOCT_4: @data_by_room[4][:levels_VOCT]
+        }.to_json %>"></canvas>
+    </div>
+    <div class="card-category">
+      <canvas data-graphics-target="myChart4" width="400" height="400" data-graphics-chart4-data="<%= {
+        labels: @data_by_room[1][:times_HUM],
+        data_HUM_1: @data_by_room[1][:levels_HUM],
+        data_HUM_3: @data_by_room[3][:levels_HUM],
+        data_HUM_4: @data_by_room[4][:levels_HUM],
       }.to_json %>"></canvas>
-  </div>
-  <div class="card-category">
-    <canvas data-graphics-target="myChart4" width="400" height="400" data-graphics-chart4-data="<%= {
-      labels: @data_by_room[1][:times_HUM],
-      data_HUM_1: @data_by_room[1][:levels_HUM],
-      data_HUM_3: @data_by_room[3][:levels_HUM],
-      data_HUM_4: @data_by_room[4][:levels_HUM],
-    }.to_json %>"></canvas>
+    </div>
   </div>
 </div>

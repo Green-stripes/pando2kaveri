@@ -28,6 +28,11 @@ export default class extends Controller {
             text: "CO2 Levels",
           },
         },
+        scales: {
+          x: {
+            display: false,
+          },
+        }
       },
       data: {
         labels: data.labels,
@@ -35,21 +40,21 @@ export default class extends Controller {
           {
             label: "Room 1",
             data: data.data_CO2_1,
-            backgroundColor: "rgba(255, 99, 132, 0.2)",
-            borderColor: "rgba(255, 99, 132, 1)",
+            backgroundColor: "rgba(3, 169, 252, 0.2)",
+            borderColor: "rgba(3, 169, 252, 1)",
             borderWidth: 1,
           },
           {
             label: "Room 3",
             data: data.data_CO2_3,
-            backgroundColor: "rgba(255, 255, 132, 0.2)",
-            borderColor: "rgba(255, 99, 132, 1)",
+            backgroundColor: "rgba(252, 161, 3, 0.2)",
+            borderColor: "rgba(252, 161, 3, 1)",
             borderWidth: 1,
           },
           {
             label: "Room 4",
             data: data.data_CO2_4,
-            backgroundColor: "rgba(255, 99, 255, 0.2)",
+            backgroundColor: "rgba(255, 99, 255, 0.1)",
             borderColor: "rgba(255, 99, 132, 1)",
             borderWidth: 1,
           },
@@ -66,6 +71,11 @@ export default class extends Controller {
             text: "TMP Levels",
           },
         },
+        scales: {
+          x: {
+            display: false,
+          },
+        }
       },
       data: {
         labels: data1.labels,
@@ -73,22 +83,22 @@ export default class extends Controller {
           {
             label: "Room 1",
             data: data1.data_TMP_1,
-            backgroundColor: "rgba(255, 0, 0, 0.2)",
-            borderColor: "rgba(255, 0, 0, 1)",
+            backgroundColor: "rgba(3, 169, 252, 0.2)",
+            borderColor: "rgba(3, 169, 252, 1)",
             borderWidth: 1,
           },
           {
             label: "Room 3",
             data: data1.data_TMP_3,
-            backgroundColor: "rgba(0, 0, 255, 0.2)",
-            borderColor: "rgba(0, 0, 255, 1)",
+            backgroundColor: "rgba(252, 161, 3, 0.2)",
+            borderColor: "rgba(252, 161, 3, 1)",
             borderWidth: 1,
           },
           {
             label: "Room 4",
             data: data1.data_TMP_4,
-            backgroundColor: "rgba(0, 255, 0, 0.2)",
-            borderColor: "rgba(0, 255, 0, 1)",
+            backgroundColor: "rgba(255, 99, 255, 0.2)",
+            borderColor: "rgba(255, 99, 255, 1)",
             borderWidth: 1,
           },
         ],
@@ -103,6 +113,11 @@ export default class extends Controller {
             text: "VOCT Levels",
           },
         },
+        scales: {
+          x: {
+            display: false,
+          },
+        }
       },
       data: {
         labels: data3.labels,
@@ -110,22 +125,22 @@ export default class extends Controller {
           {
             label: "Room 1",
             data: data3.data_VOCT_1,
-            backgroundColor: "rgba(255, 99, 132, 0.2)",
-            borderColor: "rgba(255, 99, 132, 1)",
+            backgroundColor: "rgba(3, 169, 252, 0.2)",
+            borderColor: "rgba(3, 169, 252, 1)",
             borderWidth: 1,
           },
           {
             label: "Room 3",
             data: data3.data_VOCT_3,
-            backgroundColor: "rgba(255, 255, 132, 0.2)",
-            borderColor: "rgba(255, 99, 132, 1)",
+            backgroundColor: "rgba(252, 161, 3, 0.2)",
+            borderColor: "rgba(252, 161, 3, 1)",
             borderWidth: 1,
           },
           {
             label: "Room 4",
             data: data3.data_VOCT_4,
             backgroundColor: "rgba(255, 99, 255, 0.2)",
-            borderColor: "rgba(255, 99, 132, 1)",
+            borderColor: "rgba(255, 99, 255, 1)",
             borderWidth: 1,
           },
         ],
@@ -140,6 +155,11 @@ export default class extends Controller {
             text: "HUM Levels",
           },
         },
+        scales: {
+          x: {
+            display: false,
+          },
+        }
       },
       data: {
         labels: data4.labels,
@@ -147,22 +167,22 @@ export default class extends Controller {
           {
             label: "Room 1",
             data: data4.data_HUM_1,
-            backgroundColor: "rgba(255, 99, 132, 0.2)",
-            borderColor: "rgba(255, 99, 132, 1)",
+            backgroundColor: "rgba(3, 169, 252, 0.2)",
+            borderColor: "rgba(3, 169, 252, 1)",
             borderWidth: 1,
           },
           {
             label: "Room 3",
             data: data4.data_HUM_3,
-            backgroundColor: "rgba(255, 255, 132, 0.2)",
-            borderColor: "rgba(255, 99, 132, 1)",
+            backgroundColor: "rgba(252, 161, 3, 0.2)",
+            borderColor: "rgba(252, 161, 3, 1)",
             borderWidth: 1,
           },
           {
             label: "Room 4",
             data: data4.data_HUM_4,
             backgroundColor: "rgba(255, 99, 255, 0.2)",
-            borderColor: "rgba(255, 99, 132, 1)",
+            borderColor: "rgba(255, 99, 255, 1)",
             borderWidth: 1,
           },
         ],
