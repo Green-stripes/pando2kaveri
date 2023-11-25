@@ -3,7 +3,7 @@ import { Chart, registerables } from "chart.js";
 Chart.register(...registerables);
 
 export default class extends Controller {
-  static targets = ["myChart", "myChart1", "myChart3"];
+  static targets = ["myChart", "myChart1", "myChart3", "myChart4"];
 
   connect() {
     const data = JSON.parse(
@@ -14,7 +14,10 @@ export default class extends Controller {
     );
     const data3 = JSON.parse(
       this.myChart3Target.getAttribute("data-graphics-chart3-data")
-    );// Fetch data from data attribute
+    );
+    const data4 = JSON.parse(
+      this.myChart4Target.getAttribute("data-graphics-chart4-data")
+    ); // Fetch data from data attribute
 
     new Chart(this.myChartTarget, {
       type: "line",
@@ -22,7 +25,7 @@ export default class extends Controller {
         plugins: {
           title: {
             display: true,
-            text: "Room 4",
+            text: "CO2 Levels",
           },
         },
       },
@@ -30,29 +33,22 @@ export default class extends Controller {
         labels: data.labels,
         datasets: [
           {
-            label: "CO2 Levels",
-            data: data.data_CO2,
+            label: "Room 1",
+            data: data.data_CO2_1,
             backgroundColor: "rgba(255, 99, 132, 0.2)",
             borderColor: "rgba(255, 99, 132, 1)",
             borderWidth: 1,
           },
           {
-            label: "TMP Levels",
-            data: data.data_TMP,
+            label: "Room 3",
+            data: data.data_CO2_3,
             backgroundColor: "rgba(255, 255, 132, 0.2)",
             borderColor: "rgba(255, 99, 132, 1)",
             borderWidth: 1,
           },
           {
-            label: "VOCT Levels",
-            data: data.data_VOCT,
-            backgroundColor: "rgba(255, 99, 255, 0.2)",
-            borderColor: "rgba(255, 99, 132, 1)",
-            borderWidth: 1,
-          },
-          {
-            label: "HUM Levels",
-            data: data.data_HUM,
+            label: "Room 4",
+            data: data.data_CO2_4,
             backgroundColor: "rgba(255, 99, 255, 0.2)",
             borderColor: "rgba(255, 99, 132, 1)",
             borderWidth: 1,
@@ -67,7 +63,7 @@ export default class extends Controller {
         plugins: {
           title: {
             display: true,
-            text: "Room 1",
+            text: "TMP Levels",
           },
         },
       },
@@ -75,31 +71,24 @@ export default class extends Controller {
         labels: data1.labels,
         datasets: [
           {
-            label: "CO2 Levels",
-            data: data1.data_CO2,
-            backgroundColor: "rgba(255, 99, 132, 0.2)",
-            borderColor: "rgba(255, 99, 132, 1)",
+            label: "Room 1",
+            data: data1.data_TMP_1,
+            backgroundColor: "rgba(255, 0, 0, 0.2)",
+            borderColor: "rgba(255, 0, 0, 1)",
             borderWidth: 1,
           },
           {
-            label: "TMP Levels",
-            data: data1.data_TMP,
-            backgroundColor: "rgba(255, 255, 132, 0.2)",
-            borderColor: "rgba(255, 99, 132, 1)",
+            label: "Room 3",
+            data: data1.data_TMP_3,
+            backgroundColor: "rgba(0, 0, 255, 0.2)",
+            borderColor: "rgba(0, 0, 255, 1)",
             borderWidth: 1,
           },
           {
-            label: "VOCT Levels",
-            data: data1.data_VOCT,
-            backgroundColor: "rgba(255, 99, 255, 0.2)",
-            borderColor: "rgba(255, 99, 132, 1)",
-            borderWidth: 1,
-          },
-          {
-            label: "HUM Levels",
-            data: data1.data_HUM,
-            backgroundColor: "rgba(255, 99, 255, 0.2)",
-            borderColor: "rgba(255, 99, 132, 1)",
+            label: "Room 4",
+            data: data1.data_TMP_4,
+            backgroundColor: "rgba(0, 255, 0, 0.2)",
+            borderColor: "rgba(0, 255, 0, 1)",
             borderWidth: 1,
           },
         ],
@@ -111,7 +100,7 @@ export default class extends Controller {
         plugins: {
           title: {
             display: true,
-            text: "Room 3",
+            text: "VOCT Levels",
           },
         },
       },
@@ -119,29 +108,59 @@ export default class extends Controller {
         labels: data3.labels,
         datasets: [
           {
-            label: "CO2 Levels",
-            data: data3.data_CO2,
+            label: "Room 1",
+            data: data3.data_VOCT_1,
             backgroundColor: "rgba(255, 99, 132, 0.2)",
             borderColor: "rgba(255, 99, 132, 1)",
             borderWidth: 1,
           },
           {
-            label: "TMP Levels",
-            data: data3.data_TMP,
+            label: "Room 3",
+            data: data3.data_VOCT_3,
             backgroundColor: "rgba(255, 255, 132, 0.2)",
             borderColor: "rgba(255, 99, 132, 1)",
             borderWidth: 1,
           },
           {
-            label: "VOCT Levels",
-            data: data3.data_VOCT,
+            label: "Room 4",
+            data: data3.data_VOCT_4,
             backgroundColor: "rgba(255, 99, 255, 0.2)",
             borderColor: "rgba(255, 99, 132, 1)",
             borderWidth: 1,
           },
+        ],
+      },
+    });
+    new Chart(this.myChart4Target, {
+      type: "line",
+      options: {
+        plugins: {
+          title: {
+            display: true,
+            text: "HUM Levels",
+          },
+        },
+      },
+      data: {
+        labels: data4.labels,
+        datasets: [
           {
-            label: "HUM Levels",
-            data: data3.data_HUM,
+            label: "Room 1",
+            data: data4.data_HUM_1,
+            backgroundColor: "rgba(255, 99, 132, 0.2)",
+            borderColor: "rgba(255, 99, 132, 1)",
+            borderWidth: 1,
+          },
+          {
+            label: "Room 3",
+            data: data4.data_HUM_3,
+            backgroundColor: "rgba(255, 255, 132, 0.2)",
+            borderColor: "rgba(255, 99, 132, 1)",
+            borderWidth: 1,
+          },
+          {
+            label: "Room 4",
+            data: data4.data_HUM_4,
             backgroundColor: "rgba(255, 99, 255, 0.2)",
             borderColor: "rgba(255, 99, 132, 1)",
             borderWidth: 1,
