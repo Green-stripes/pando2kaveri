@@ -1,5 +1,13 @@
 <h1>Your readings:</h1>
-<%= @data_by_room[4][:times_CO2] %>
-<div data-controller="graphics">
-   <canvas data-graphics-target="myChart" width="400" height="400" data-graphics-chart-data="<%= { labels:  @data_by_room[4][:times_CO2], data: @data_by_room[4][:levels_CO2] }.to_json%>"></canvas>
+
+<div class="cards">
+  <div class="card-category" data-controller="graphics">
+  <canvas data-graphics-target="myChart" width="400" height="400" data-graphics-chart-data="<%= {
+    labels: @data_by_room[4][:times_CO2],
+    data_CO2: @data_by_room[4][:levels_CO2],
+    data_TMP: @data_by_room[4][:levels_TMP],
+    data_VOCT: @data_by_room[4][:levels_VOCT],
+    data_HUM: @data_by_room[4][:levels_HUM],
+  }.to_json %>"></canvas>
+</div>
 </div>
