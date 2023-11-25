@@ -17,7 +17,7 @@ export default class extends Controller {
     );
     const data4 = JSON.parse(
       this.myChart4Target.getAttribute("data-graphics-chart4-data")
-    ); // Fetch data from data attribute
+    );
 
     new Chart(this.myChartTarget, {
       type: "line",
@@ -27,6 +27,11 @@ export default class extends Controller {
             display: true,
             text: "CO2 Levels",
           },
+          datalabels: {
+            display: function (context) {
+              return context.chart.isDatasetVisible(context.datasetIndex);
+          }
+        },
         },
         scales: {
           x: {
@@ -70,6 +75,11 @@ export default class extends Controller {
             display: true,
             text: "TMP Levels",
           },
+          datalabels: {
+            display: function (context) {
+              return context.chart.isDatasetVisible(context.datasetIndex);
+          }
+        },
         },
         scales: {
           x: {
@@ -112,6 +122,11 @@ export default class extends Controller {
             display: true,
             text: "VOCT Levels",
           },
+          datalabels: {
+            display: function (context) {
+              return context.chart.isDatasetVisible(context.datasetIndex);
+          }
+        },
         },
         scales: {
           x: {
@@ -154,6 +169,11 @@ export default class extends Controller {
             display: true,
             text: "HUM Levels",
           },
+          datalabels: {
+            display: function (context) {
+              return context.chart.isDatasetVisible(context.datasetIndex);
+          }
+        },
         },
         scales: {
           x: {
