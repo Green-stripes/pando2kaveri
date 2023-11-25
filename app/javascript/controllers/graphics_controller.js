@@ -12,6 +12,14 @@ export default class extends Controller {
 
     new Chart(this.myChartTarget, {
       type: "line",
+      options: {
+        plugins: {
+            title: {
+                display: true,
+                text: 'Room 4'
+            }
+        }
+    },
       data: {
         labels: data.labels,
         datasets: [
